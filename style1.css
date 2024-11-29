@@ -1,0 +1,41 @@
+/* Định dạng bảng */
+table {
+    width: 100%; /* Đặt chiều rộng bảng đầy đủ */
+    border-collapse: collapse; /* Loại bỏ khoảng cách giữa các ô */
+    margin-top: 20px; /* Thêm khoảng cách phía trên */
+}
+
+th, td {
+    text-align: center; /* Căn giữa nội dung ô */
+    padding: 10px; /* Thêm khoảng cách bên trong */
+    border: 1px solid #ddd; /* Viền mờ nhạt */
+    vertical-align: middle; /* Căn giữa theo chiều dọc */
+}
+
+/* Thu nhỏ ảnh trong bảng */
+td img {
+    width: 100px; /* Chiều rộng cố định */
+    height: auto; /* Giữ tỷ lệ ảnh */
+    object-fit: cover; /* Cắt ảnh nếu vượt quá kích thước */
+    border-radius: 5px; /* Bo góc ảnh */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Đổ bóng nhẹ */
+}
+
+/* Định dạng tiêu đề */
+th {
+    background-color: #007bff; /* Màu nền tiêu đề */
+    color: white; /* Màu chữ tiêu đề */
+    text-transform: uppercase; /* Chữ in hoa */
+    font-weight: bold;
+}
+
+/* Định dạng nút */
+button, a {
+    margin: 0 5px; /* Khoảng cách giữa các nút */
+}
+
+/* Định dạng modal */
+.modal-header {
+    background-color: #007bff; /* Màu nền tiêu đề modal */
+    color: white; /* Màu chữ */
+}

@@ -1,51 +1,77 @@
-body{
-    font-family: Arial, sans- serif;
+/* Tổng quan */
+body {
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    background-color: aliceblue;
+    background-color: #f9f9f9;
     color: #333;
+}
 
-}
-h1{
+h1 {
     text-align: center;
-    margin: 20px 0;
-    font-size: 2em;
-    color: #333;
+    margin-top: 20px;
+    font-size: 2.5em;
+    color: #2c3e50;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
-.flower-list{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
+
+/* Danh sách các loài hoa */
+.flower-list {
+    display: flex;
+    flex-wrap: wrap; /* Tự động xuống dòng */
+    justify-content: center; /* Căn giữa các mục */
+    gap: 20px; /* Khoảng cách giữa các mục */
     padding: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
 }
-.flower-item{
+
+/* Mục hoa */
+.flower-item {
     background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px wheat;
-    overflow: hidden;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 300px; /* Chiều rộng cố định */
     text-align: center;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
-.flower-item img{
+
+.flower-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.flower-item img {
     width: 100%;
     height: 180px;
     object-fit: cover;
-    border-bottom: 4px solid #333;
+    border-bottom: 1px solid #ddd;
 }
-.flower-item h2{
-    margin: 10px 0;
+
+.flower-item h2 {
     font-size: 1.5em;
-    color: #333;
+    margin: 10px 0;
+    color: #2c3e50;
 }
-.flower-item p{
-    font-size: 1em;
-    color: #666;
-    padding: 0 10px 10px;
+
+.flower-item p {
+    font-size: 0.95em;
+    color: #7f8c8d;
+    padding: 10px;
+    line-height: 1.5;
+    text-align: justify;
 }
-.flower-item:hover{
-    transform: translateY(-5px);
-    box-shadow: 0 8px 12px wheat;
+
+/* Responsive */
+@media (max-width: 768px) {
+    .flower-item {
+        width: 45%; /* 2 mục trên một hàng */
+    }
+}
+
+@media (max-width: 480px) {
+    .flower-item {
+        width: 100%; /* 1 mục trên một hàng */
+    }
 }
